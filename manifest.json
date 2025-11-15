@@ -1,0 +1,34 @@
+{
+  "name": "douyin-downloader",
+  "author": "your-name",
+  "title": "抖音视频下载器",
+  "description": "解析并下载抖音无水印视频",
+  "icon": "icon.png",
+  "version": "1.0.0",
+  "homepage": "https://your-homepage.com",
+  "repository": {
+    "url": "https://github.com/your-name/gopeed-extension-douyin"
+  },
+  "scripts": [
+    {
+      "event": "onResolve",
+      "match": {
+        "urls": [
+          "*://v.douyin.com/*",
+          "*://www.douyin.com/video/*",
+          "*://www.douyin.com/note/*"
+        ]
+      },
+      "entry": "dist/index.js"
+    }
+  ],
+  "settings": [
+    {
+      "name": "apiEndpoint",
+      "title": "解析API端点",
+      "description": "用于解析抖音视频的API服务地址",
+      "type": "string",
+      "default": "https://api.douyin.wtf"
+    }
+  ]
+}
