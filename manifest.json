@@ -1,11 +1,11 @@
 {
-  "name": "douyin-downloader",
+  "name": "douyin-downloader-pro",
   "author": "gopeed-user",
-  "title": "抖音视频下载器",
-  "description": "解析并下载抖音无水印视频，支持多种链接格式",
+  "title": "抖音视频下载器增强版",
+  "description": "全面解析各种抖音链接格式，支持视频、图集、用户主页等",
   "icon": "icon.png",
-  "version": "1.1.0",
-  "homepage": "https://github.com/dazatan/gopeed-douyin",
+  "version": "2.0.0",
+  "homepage": "https://github.com/gopeed/plugin-douyin",
   "scripts": [
     {
       "event": "onResolve",
@@ -14,8 +14,14 @@
           "*://v.douyin.com/*",
           "*://www.douyin.com/video/*",
           "*://www.douyin.com/note/*",
+          "*://www.douyin.com/share/*",
           "*://www.iesdouyin.com/*",
-          "*://douyin.com/*"
+          "*://douyin.com/*",
+          "*://webcast.amemv.com/*",
+          "*://www.douyin.com/user/*",
+          "*://*.douyin.com/user/*",
+          "*://www.douyin.com/discover*",
+          "*://*.douyin.com/discover*"
         ]
       },
       "entry": "dist/index.js"
@@ -28,6 +34,18 @@
       "description": "解析请求的超时时间",
       "type": "number",
       "default": 30000
+    },
+    {
+      "name": "downloadType",
+      "title": "下载类型",
+      "description": "选择下载内容类型",
+      "type": "select",
+      "options": [
+        {"label": "仅下载视频", "value": "video"},
+        {"label": "仅下载封面", "value": "cover"},
+        {"label": "视频和封面都下载", "value": "both"}
+      ],
+      "default": "video"
     }
   ]
 }
