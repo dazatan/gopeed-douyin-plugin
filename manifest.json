@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "homepage": "https://your-homepage.com",
   "repository": {
-    "url": "https://github.com/your-name/gopeed-extension-douyin"
+    "url": "https://github.com/dazatan/gopeed-douyin"
   },
   "scripts": [
     {
